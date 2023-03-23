@@ -12,7 +12,7 @@ public interface AuthorService {
 
     List<Author> findAll();
 
-    Optional<Author> save(String name, String surname);
+    Optional<Author> save(String name, String surname, Country country);
     Optional<Author> save(AuthorDto authorDto);
 
     Optional<Author> edit(Long id, AuthorDto authorDto);

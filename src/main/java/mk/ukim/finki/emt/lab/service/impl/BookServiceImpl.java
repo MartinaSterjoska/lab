@@ -52,7 +52,7 @@ public class BookServiceImpl implements BookService {
         return Optional.of(book);
     }
     @Override
-    public Optional<Book> edit(Long id, BookDto bookDto) {
+    public Optional<Book> edit(Long id,  BookDto bookDto){
         Book book = this.bookRepository.findById(id)
                 .orElseThrow(() -> new BookNotFoundException(id));
         Author author = this.authorRepository.findById(bookDto.getAuthor().getId())

@@ -34,9 +34,9 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public Optional<Author> save(String name, String surname) {
+    public Optional<Author> save(String name, String surname, Country country) {
 
-        return Optional.of(this.authorRepository.save(new Author(name, surname)));
+        return Optional.of(this.authorRepository.save(new Author(name, surname, country)));
     }
 
     @Override
